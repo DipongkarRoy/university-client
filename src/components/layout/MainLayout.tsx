@@ -5,6 +5,7 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
+import { Outlet } from "react-router-dom";
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -76,8 +77,7 @@ const MainLayout = () => {
               minHeight: 360,
             }}
           >
-            <h1>Welcome to Vite React</h1>
-            <p>Click on the Vite and React logos to learn more</p>
+          <Outlet/>
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
