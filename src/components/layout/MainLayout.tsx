@@ -1,46 +1,37 @@
-import { Layout, Menu, MenuProps } from "antd";
+import { Layout, Menu } from "antd";
 
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-import { Outlet } from "react-router-dom";
+
+import {   Outlet } from "react-router-dom";
+import { adminSidebarItems } from "../../routes/Admin.routes";
 
 
 const { Header, Content, Footer, Sider } = Layout;
 
-const items:MenuProps['items'] = [{
-  key: "content",
-  icon: <UserOutlined />,
-  label: "Content",
+// const items:MenuProps['items'] = [
+// {
+//   key: "Dashboard",
+//   label: <NavLink to='/admin/dashboard'>Dashboard</NavLink>,
+// },
+// {
+//   key: "users-management",
+//   label:'User Management',
+//   children:[
+//     {
+//       key:'create-admin',
+//       label:<NavLink to='/admin/create-admin'>Create Admin</NavLink>,
+//     },
+//     {
+//       key:'create-faculty',
+//       label:<NavLink to='/admin/create-faculty'>Create Faculty</NavLink>,
+//     },
+//     {
+//       key:'create-student',
+//       label:<NavLink to='/admin/create-students'>Create Student</NavLink>,
+//     },
+//   ]
+// }
 
-},
-{
-  key: "useroutlined",
-  icon: <VideoCameraOutlined />,
-  label: "useroutlined",
-},{
-  key: "Dashboard",
-  icon: <UploadOutlined />,
-  label: "Dashboard",
-  children:[
-    {
-      key:'home',
-      label:'home'
-    },
-    {
-      key:'about',
-      label:'about'
-    },
-    { 
-      key:'contact',
-      label:'contact'
-    }
-  ]
-}
-
-];
+// ];
 
 const MainLayout = () => {
   return (
@@ -65,7 +56,7 @@ const MainLayout = () => {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={["4"]}
-          items={items}
+          items={adminSidebarItems}
         />
       </Sider>
       <Layout>
