@@ -1,25 +1,11 @@
 
-import { ReactNode } from "react";
 import AdminDashbord from "../pages/admin/AdminDashbord";
 import CreateAdmin from "../pages/admin/CreateAdmin";
 import CreateFaculty from "../pages/admin/CreateFaculty";
 import CreateStudent from "../pages/admin/CreateStudent";
-import { NavLink } from "react-router-dom";
 
 
-type TAdminTypeProps ={
-    path:string,
-    element:React.ReactNode,
-    children?:TAdminTypeProps[]
-}
-
-type TSidebarItem = {
-    key: string;
-    label: ReactNode;
-    children?: TSidebarItem[];
-  };
-
-const adminPath  = [
+export const adminPath  = [
     {
         name:'Dashboard',
         path:'dashboard',
@@ -48,6 +34,7 @@ const adminPath  = [
 ]
 
 //sidebar navigation items for admin routes:
+/*
 export const adminSidebarItems = adminPath.reduce(
     (acc: TSidebarItem[], item) => {
       if (item.path && item.name) {
@@ -72,9 +59,11 @@ export const adminSidebarItems = adminPath.reduce(
     },
     []
   );
+** */
 
 /**Programathical route lear pannel */
 
+/*
 export const adminRoutes = adminPath.reduce((acc:TAdminTypeProps[] ,item)=>{
     if(item.path && item.element){
      acc.push({
@@ -92,7 +81,7 @@ export const adminRoutes = adminPath.reduce((acc:TAdminTypeProps[] ,item)=>{
     }
      return acc;
  },[])
- console.log(adminPath);
+**/
  
 
 /** 
