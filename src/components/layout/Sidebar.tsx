@@ -11,9 +11,11 @@ const userRoles = {
   FACULTY: "faculty",
 };
 const Sidebar = () => {
+
   const role = "admin";
   let sidebarItems;
-  switch (role) {
+
+  switch ( role) {
     case userRoles.ADMIN:
       sidebarItems = sidebarItemsGanarators(adminPath, userRoles.ADMIN);
       break;

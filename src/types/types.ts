@@ -16,4 +16,10 @@ export type TUserPath = {
     path?:string,
     element?:ReactNode,
     children?:TUserPath[]
+}
+export type TUser ={
+    userId:string;
+    role:string;
+    iat:number;
+    exp:number;
 }  
